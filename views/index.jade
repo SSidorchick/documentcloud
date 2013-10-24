@@ -1,9 +1,12 @@
 extends layout
 
 block content
-  h1 Document Cloud
+  h1.caption Document Cloud
 
   div.app
 
   script(id='documenttemplate', type='text/x-handlebars')
-    File name: {{FileName}} | added: {{DateAdded}} | size: {{FileSize}}
+    div.document-content
+      h4
+        <a href='#' class='file-name'>{{FileName}}</a>
+      div.meta ({{FileSize}} {{DateAdded}}) 

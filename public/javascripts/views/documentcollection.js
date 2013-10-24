@@ -1,7 +1,6 @@
 define(['backbone', 'views/document'], function(Backbone, DocumentView) {
   return Backbone.View.extend({
-    tagName: 'ul',
-    className: 'documents',
+    className: 'row documents',
 
     initialize: function() {
       this.listenTo(this.collection, 'reset', this.render);

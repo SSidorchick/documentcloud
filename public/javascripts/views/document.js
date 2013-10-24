@@ -1,8 +1,7 @@
 define(['backbone', 'handlebars', 'jquery'],
 function(Backbone, Handlebars, $) {
   return Backbone.View.extend({
-    tagName: 'li',
-    className: 'document',
+    className: 'col-sm-6 document',
 
     render: function() {
       var template = $('#documenttemplate').html();
