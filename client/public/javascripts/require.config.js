@@ -1,3 +1,6 @@
+/*
+ * Require js config for loading dependencies.
+ */
 require.config({
   baseUrl: '/javascripts',
 

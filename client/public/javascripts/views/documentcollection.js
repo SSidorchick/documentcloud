@@ -1,3 +1,6 @@
+/*
+ * Document Collection view. Renders the Document views.
+ */
 define(['backbone', 'views/document'], function(Backbone, DocumentView) {
   return Backbone.View.extend({
     className: 'row documents',

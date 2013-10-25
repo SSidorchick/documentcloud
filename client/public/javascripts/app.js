@@ -1,3 +1,6 @@
+/*
+ * Starts application by initializing Router and starting Backbone history.
+ */
 define(['backbone', 'router'], function(Backbone, Router) {
   var App = {};
   App.start = function() {

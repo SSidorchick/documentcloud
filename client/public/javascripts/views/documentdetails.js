@@ -1,4 +1,7 @@
-define(['backbone', 'handlebars'], function(Backbone, Handlebars) {
+/*
+ * Document details view.
+ */
+define(['backbone', 'handlebars', 'jquery'], function(Backbone, Handlebars, $) {
   return Backbone.View.extend({
     className: 'document-details',
 

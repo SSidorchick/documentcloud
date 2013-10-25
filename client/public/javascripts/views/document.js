@@ -1,3 +1,6 @@
+/*
+ * Document view. Renders the view and handles click on document anchor.
+ */
 define(['backbone', 'handlebars', 'jquery', 'events'],
 function(Backbone, Handlebars, $, Events) {
   return Backbone.View.extend({

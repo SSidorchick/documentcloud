@@ -1,7 +1,10 @@
-define(['backbone', 'events', 'collections/document', 'views/documentcollection',
-'views/documentdetails'],
-function(Backbone, Events, DocumentCollection, DocumentCollectionView,
-DocumentDetailsView) {
+/*
+ * Router manages routing logic.
+ */
+define(['backbone', 'events', 'collections/document',
+        'views/documentcollection', 'views/documentdetails'],
+function(Backbone, Events, DocumentCollection,
+         DocumentCollectionView, DocumentDetailsView) {
   return Backbone.Router.extend({
     routes: {
       '': 'index',
