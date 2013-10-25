@@ -10,3 +10,10 @@ block content
       h4
         <a href='#' class='file-name'>{{FileName}}</a>
       div.meta ({{FileSize}} {{DateAdded}}) 
+
+  script(id='documentdetailstemplate', type='text/x-handlebars')
+    <h3>Name: {{FileName}}</h3>
+    <p>Size: {{FileSize}}<p>
+    <p>Added: {{DateAdded}}<p>
+
+    button.btn.btn-default Download

@@ -1,7 +1,11 @@
-define(['backbone', 'handlebars', 'jquery'],
-function(Backbone, Handlebars, $) {
+define(['backbone', 'handlebars', 'jquery', 'events'],
+function(Backbone, Handlebars, $, Events) {
   return Backbone.View.extend({
     className: 'col-sm-6 document',
+
+    events: {
+      'click .file-name': '_documentClick'
+    },
 
     render: function() {
       var template = $('#documenttemplate').html();
@@ -9,6 +13,13 @@ function(Backbone, Handlebars, $) {
       var html = compiled(this.model.attributes);
       this.$el.html(html);
       return this;
+    },
+
+    _documentClick: function(e) {
+      e.preventDefault();
+      var id = this.model.get("AttachmentId");
+      var url = 'documents/' + id;
+      Events.trigger('router:navigate', url);
     }
   });
 });
