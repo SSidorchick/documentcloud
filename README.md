@@ -1,15 +1,11 @@
 # Express.js + Backbone.js demo project
 
----
-
 This project demonstrates how a simple application can be created with JavaScript thechnologies. It works as a simple SPA. The main page contains a hardcoded grid of documents. Clicking on a document application navigates to document details page.
 
 The application is splited into client part to serve html pages and service part to provide data api.
 
 
-### Used technologies
-
----
+## Used technologies
 
 * Express.js
 * Backbone.js
@@ -17,17 +13,13 @@ The application is splited into client part to serve html pages and service part
 * Handlebars
 
 
-### Installation
-
----
+## Installation
 
 Clone github repository
 
 	$ git clone git@github.com:SSidorchick/express-backbone-demo.git
 	
 The rest of steps should be followed both for client and service folder
-
----
 
 Install npm dependences
 
