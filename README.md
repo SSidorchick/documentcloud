@@ -30,7 +30,7 @@ Run app (development mode)
 	$ node app.js
 
 
-### TODO
+## TODO
 
 * Create controller for Document model and move the views creation from Router to it
 * Splite Handlebars templates in parts for each Backbone view respectively
