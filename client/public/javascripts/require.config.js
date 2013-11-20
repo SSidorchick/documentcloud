@@ -2,13 +2,13 @@
  * Require js config for loading dependencies.
  */
 require.config({
-  baseUrl: '/javascripts',
+  baseUrl: 'public/javascripts',
 
   paths: {
-    jquery: 'lib/jquery',
-    backbone: 'lib/backbone',
-    underscore: 'lib/underscore',
-    handlebars: 'lib/handlebars'
+    jquery: '../../bower_components/jquery/jquery',
+    backbone: '../../bower_components/backbone/backbone',
+    underscore: '../../bower_components/underscore/underscore',
+    handlebars: '../../bower_components/handlebars/handlebars.amd'
   },
 
   shim: {

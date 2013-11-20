@@ -12,7 +12,7 @@ function(Backbone, Handlebars, $, Events) {
 
     render: function() {
       var template = $('#documenttemplate').html();
-      var compiled = Handlebars.compile(template);
+      var compiled = Handlebars.default.compile(template);
       var html = compiled(this.model.attributes);
       this.$el.html(html);
       return this;
