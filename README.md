@@ -18,14 +18,32 @@ The application is splited into client part to serve html pages and service part
 Clone github repository
 
 	$ git clone git@github.com:SSidorchick/express-backbone-demo.git
-	
-The rest of steps should be followed both for client and service folder
 
-Install npm dependences
+### Service	
+
+Move to service folder
+		
+Install npm dependencies
 
 	$ npm install
 	
-Run app (development mode)
+Run app
+
+	$ node app.js
+
+### Client
+
+Move to client folder
+
+Install npm dependencies
+
+	$ npm install
+	
+Install bower dependencies
+
+	$ bower install
+	
+Run app
 
 	$ node app.js
 
@@ -33,7 +51,7 @@ Run app (development mode)
 ## TODO
 
 * Create controller for Document model and move the views creation from Router to it
-* Splite Handlebars templates in parts for each Backbone view respectively
+* ~~Splite Handlebars templates in parts for each Backbone view respectively~~
 * Remove Backbone Events usage and introduce event object that can be used by view to trigger events and controller to add handlers on this event
 * Add RequireJs code compilation for production environment
-* Add package management for JavaScript libraries such as Backbone, Handlebars, etc 
+* ~~Add package management for JavaScript libraries such as Backbone, Handlebars, etc~~ 
