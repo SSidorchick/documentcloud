@@ -1,14 +1,13 @@
 /*
  * Document details view.
  */
-define(['backbone', 'handlebars', 'jquery'], function(Backbone, Handlebars, $) {
+define(['backbone', 'handlebars', 'jquery', 'hbs!templates/documentdetails'],
+function(Backbone, Handlebars, $, template) {
   return Backbone.View.extend({
     className: 'document-details',
 
     render: function() {
-      var template = $('#documentdetailstemplate').html();
-      var compiled = Handlebars.default.compile(template);
-      var html = compiled(this.model.attributes);
+      var html = template(this.model.attributes);
       this.$el.html(html);
       return this;
     }

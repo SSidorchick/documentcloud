@@ -1,19 +1,13 @@
-extends layout
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='public/stylesheets/style.css')
+    script(src='bower_components/requirejs/require.js', data-main='public/javascripts/require.config.js')
+  body
+  .container
+    h1.caption Document Cloud
 
-block content
-  h1.caption Document Cloud
-
-  div.app
-
-  script(id='documenttemplate', type='text/x-handlebars')
-    div.document-content
-      h4
-        <a href='#' class='file-name'>{{FileName}}</a>
-      div.meta ({{FileSize}} {{DateAdded}}) 
-
-  script(id='documentdetailstemplate', type='text/x-handlebars')
-    h3 {{FileName}}
-    <p>Size: {{FileSize}}<p>
-    <p>Added: {{DateAdded}}<p>
-
-    button.btn.btn-default Download
+    div.app

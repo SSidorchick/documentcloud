@@ -1,8 +1,8 @@
 /*
  * Document view. Renders the view and handles click on document anchor.
  */
-define(['backbone', 'handlebars', 'jquery', 'events'],
-function(Backbone, Handlebars, $, Events) {
+define(['backbone', 'handlebars', 'jquery', 'events', 'hbs!templates/document'],
+function(Backbone, Handlebars, $, Events, template) {
   return Backbone.View.extend({
     className: 'col-sm-6 document',
 
@@ -11,9 +11,7 @@ function(Backbone, Handlebars, $, Events) {
     },
 
     render: function() {
-      var template = $('#documenttemplate').html();
-      var compiled = Handlebars.default.compile(template);
-      var html = compiled(this.model.attributes);
+			var html = template(this.model.attributes);
       this.$el.html(html);
       return this;
     },
