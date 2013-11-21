@@ -1,9 +1,9 @@
 /*
  * Router manages routing logic.
  */
-define(['backbone', 'events', 'collections/document',
+define(['backbone', 'collections/document',
         'views/documentcollection', 'views/documentdetails'],
-function(Backbone, Events, DocumentCollection,
+function(Backbone, DocumentCollection,
          DocumentCollectionView, DocumentDetailsView) {
   return Backbone.Router.extend({
     routes: {
@@ -13,16 +13,13 @@ function(Backbone, Events, DocumentCollection,
 
     initialize: function() {
       this.collection = new DocumentCollection();
-
-      Events.on('router:navigate', function(url) {
-        this.navigate(url, { trigger: true });
-      }.bind(this));
     },
 
     index: function() {
       this.collection.fetch({
         success: function(data) {
           var view = new DocumentCollectionView({ collection: data });
+          this.listenTo(view, 'click', this._documentClickHandler);
           this._renderView(view);
         }.bind(this)
       });
@@ -36,6 +33,10 @@ function(Backbone, Events, DocumentCollection,
 
     _renderView: function(view) {
       $('.app').html(view.render().el);
+    },
+
+    _documentClickHandler: function(e) {
+      this.navigate(e.url, { trigger: true });
     }
   });
 });
