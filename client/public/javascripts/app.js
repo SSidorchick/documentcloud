@@ -1,11 +1,11 @@
 /*
- * Creates Marionette application, initializes Router and starts Backbone history.
+ * Creates Marionette application, initializes routers and starts Backbone history.
  */
-define(['backbone', 'router'], function(Backbone, Router) {
+define(['backbone', 'routers/document'], function(Backbone, DocumentRouter) {
   var App = new Backbone.Marionette.Application();
 
   App.addInitializer(function() {
-    new Router();
+    new DocumentRouter();
     Backbone.history.start();
   });
 

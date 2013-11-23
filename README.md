@@ -50,11 +50,8 @@ Run app
 
 ## TODO
 
-* Create controller for Document model and move the views creation from Router to it
+* ~~Create controller for Document model and move the views creation from Router to it~~
 * ~~Splite Handlebars templates in parts for each Backbone view respectively~~
-* Remove Backbone Events usage and introduce event object that can be used by view to trigger events and controller to add handlers on this event
+* ~~Remove Backbone Events usage and introduce event object that can be used by view to trigger events and controller to add handlers on this event~~
 * Add RequireJs code compilation for production environment
 * ~~Add package management for JavaScript libraries such as Backbone, Handlebars, etc~~ 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/SSidorchick/express-backbone-demo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
