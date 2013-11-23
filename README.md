@@ -55,3 +55,6 @@ Run app
 * Remove Backbone Events usage and introduce event object that can be used by view to trigger events and controller to add handlers on this event
 * Add RequireJs code compilation for production environment
 * ~~Add package management for JavaScript libraries such as Backbone, Handlebars, etc~~ 
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/SSidorchick/express-backbone-demo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
