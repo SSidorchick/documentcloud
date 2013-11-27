@@ -40,10 +40,31 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
+      livereload: {
+        files: ['views/**/*', 'routes/**/*', 'public/**/*'],
+        options: {
+          livereload: true
+        }
+      }
+    },
+
+    express: {
+      options: {
+        port: 3000
+      },
+      dev: {
+        options: {
+          script: 'app.js'
+        }
+      }
+    },
+
+    open: {
+      server: {
+        path: 'http://localhost:<%= express.options.port %>'
+      }
     }
   });
  
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('default', ['express:dev', 'open', 'watch']);
 };
