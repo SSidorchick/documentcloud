@@ -9,11 +9,13 @@ The application is splited into client part to serve html pages and service part
 
 * Express.js
 * Backbone.js
+* Backbone.Marionette
 * RequireJs
 * Handlebars
 
 
 ## Installation
+Make sure node.js and grunt-cli are installed.
 
 Clone github repository
 
@@ -45,7 +47,7 @@ Install bower dependencies
 	
 Run app
 
-	$ node app.js
+	$ grunt
 
 
 ## TODO
